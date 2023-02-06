@@ -1,0 +1,205 @@
+:root {
+	/*HEX color to variables*/
+	--colorNavyBlue: #2E2F42;
+	--colorSlate: #434455;
+	--colorIris: #4D5AE5;
+	--colorOcean: #404BBF;
+	--colorGreen: #31D0AA;
+	--colorLightSlate: #8E8F99;
+	--colorCornflower: #E7E9FC;
+	--colorCloud: #F4F4FD;
+	--colorNavyBlueModal: #2E2F4265; /* #2E2F42 40% */
+	--colorGrey: #2E2F42b2; /* #2E2F42 70% */
+
+	/*color definition*/
+	--headersColor: var(--colorNavyBlue);
+	--textColor: var(--colorSlate);
+	--backgroundColorHeader: var(--colorCornflower);
+	--backgroundColorDark: var(--colorNavyBlue);
+	--backgroundColorLight: var(--colorCloud);
+	--backgroundColorWhite: #fff;
+	--buttonColor: var(--colorIris);
+	--logoColor: var(--colorIris);
+	--pressedStateColor: var(--colorOcean);
+	--heroTextColor: #fff;
+	--footerLinkColor: var(--colorCloud);
+	--footerTextColor: var(--colorCornflower);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: var(--colorSlate);
+	background-color: #E5E5E5;
+	/*margin: 0;*/
+}
+
+.header ul,
+.features ul,
+.portfolio ul,
+.our-team ul,
+.button-list,
+.project-list {
+	list-style: none;
+	padding: 0;	
+}
+
+.header li,
+.features li,
+.portfolio li,
+.our-team li,
+.button-list li,
+.project-list li {
+	display: inline-block;
+}
+
+.header {
+	background-color: var(--backgroundColorHeader);
+	padding: 0;
+	/*margin: 0;*/
+}
+.header nav,
+.header address,
+.header ul {
+	display: inline-block;
+}
+
+.header .link {
+	text-decoration: none;
+	color: var(--headersColor);
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 500;
+}
+
+.header address .link {
+	color: var(--textColor);
+	font-weight: 400;
+}
+
+.logo.link {
+	font-family: 'Raleway';
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.33; 	/* identical to box height, or 133% */
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+.logo span {
+	color: var(--logoColor);
+}
+
+.main {
+	background-color: var(--backgroundColorWhite);
+	padding: 0;
+	/*margin: 0;*/
+}
+
+.button {
+	cursor: pointer;
+}
+
+.hero-image {
+	color: var(--heroTextColor);
+	background-color: var(--backgroundColorDark);
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.07;
+	text-align: center;
+	letter-spacing: 0.02em;
+}
+.hero-image .button {
+	color: var(--heroTextColor);
+	background-color: var(--buttonColor);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	/*display: flex;*/
+	/*flex-direction: row;*/
+	/*align-items: flex-start;*/
+	padding: 16px 32px;
+	gap: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	/*button text*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	letter-spacing: 0.04em;	
+}
+
+.features h3,
+.our-team h3,
+.project-list h3 {
+	color: var(--headersColor);
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2;
+}
+.features p,
+.our-team p,
+.project-list p,
+.footer p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+/* отложим до позиционирования flex :) 
+.features li {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+}*/
+
+.portfolio h2,
+.our-team h2 {
+	color: var(--headersColor);
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	letter-spacing: 0.02em;
+}
+
+.our-team {
+	background-color: var(--backgroundColorLight);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	gap: 8px;
+	/*тут флекс работает как надо :) но мб по другому структуру нужно будет сделать*/
+}
+.team-card {
+	width: 264px;
+	height: 380px;
+	
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+}
+
+.footer {
+	color: var(--footerTextColor);
+	background-color: var(--backgroundColorDark);
+	padding: 0;
+	/*margin: 0;*/
+}
+.footer .link {
+	text-decoration: none;
+	color: var(--footerLinkColor);
+}
+
+.header .link:hover,
+.header .link:focus,
+.footer .link:hover,
+.footer .link:focus {
+	color: var(--pressedStateColor);
+}
+
+.button:hover,
+.button:focus {
+	background-color: var(--pressedStateColor);
+}
