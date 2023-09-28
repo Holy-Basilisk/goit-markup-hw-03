@@ -23,15 +23,16 @@
 	--pressedStateColor: var(--colorOcean);
 	--heroTextColor: #fff;
 	--footerLinkColor: var(--colorCloud);
-	--footerTextColor: var(--colorCornflower);
+	--footerTextColor: var(--colorCloud);
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	color: var(--colorSlate);
 	background-color: var(--backgroundColorWhite);
-	/*margin: 0;*/
 }
+
+.list {list-style: none}
 
 .header ul,
 .features ul,
@@ -40,7 +41,6 @@ body {
 .button-list,
 .project-list {
 	list-style: none;
-	padding: 0;	
 }
 
 .header li,
@@ -49,7 +49,7 @@ body {
 .our-team li,
 .button-list li,
 .project-list li {
-	display: inline-block;
+	
 }
 
 .header {
@@ -58,7 +58,7 @@ body {
 .header nav,
 .header address,
 .header ul {
-	display: inline-block;
+
 }
 
 .header .link {
@@ -67,6 +67,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 500;
+	letter-spacing: 0.02em;
 }
 
 .header address .link {
@@ -74,26 +75,53 @@ body {
 	font-weight: 400;
 }
 
+.footer {
+	color: var(--footerTextColor);
+	background-color: var(--backgroundColorDark);
+	
+}
+/*.footer .logo {
+	text-decoration: none;
+	color: var(--footerLinkColor);
+}*/
+
 .logo.link {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 18px;
-	line-height: 1.33; 	/* identical to box height, or 133% */
+	line-height: 1.17; /* identical to box height, or 133% */
 	letter-spacing: 0.03em;
+	text-decoration: none;
 	text-transform: uppercase;
-}
-
-.logo span {
 	color: var(--logoColor);
 }
 
+.header span {
+	color: var(--headersColor);
+}
+.footer span {
+	color: var(--footerLinkColor);
+}
+
+.address {
+	font-style: normal;
+}
+
 .main {
-	padding: 0;
-	/*margin: 0;*/
+
 }
 
 .button {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5; /* identical to box height, or 150% */
+
+	text-align: center;
+	letter-spacing: 0.04em;
 	cursor: pointer;
+
 }
 
 .hero-image {
@@ -114,11 +142,11 @@ body {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
-	padding: 16px 32px;
-	gap: 10px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
+	/*pad__ding: 16px 32px;
+	box-sha__dow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	bor__der-radius: 4px;*/
 	letter-spacing: 0.04em;	
+	text-transform: capitalize
 }
 
 .features h3,
@@ -128,6 +156,7 @@ body {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
+	letter-spacing: 0.02em;
 }
 .features p,
 .our-team p,
@@ -135,57 +164,62 @@ body {
 .footer p {
 	font-size: 16px;
 	line-height: 1.5;
+	letter-spacing: 0.02em;
 }
 
-/* отложим до позиционирования flex :) 
-.features li {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 0px;
-}*/
+.portfolio {
+	background-color: var(--backgroundColorWhite);
+}
+
 
 .portfolio h2,
 .our-team h2 {
 	color: var(--headersColor);
 	font-size: 36px;
 	line-height: 1.11;
+	text-transform: capitalize;
 	text-align: center;
 	letter-spacing: 0.02em;
+	font-weight: 700;
 }
 
 .our-team {
 	background-color: var(--backgroundColorLight);
 	text-align: center;
-	display: flex;
-	flex-direction: column;
+	/*disp__lay: flex;*/
+	/*flex-dir__ection: column;*/
 	justify-content: center;
-	align-items: center;
-	padding: 0px;
-	gap: 8px;
+/*	ali__gn-items: center;
+	pad__ding: 0px;*/
 	/*тут флекс работает как надо :) но мб по другому структуру нужно будет сделать*/
 }
-.team-card {
-	width: 264px;
-	height: 380px;
+
+.our-team .team-card {
+	background-color: var(--backgroundColorWhite);
+	/*wid__th: 264px;
+	hei__ght: 380px;*/
 	
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-	border-radius: 0px 0px 4px 4px;
+	/*box-sha__dow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	bor__der-radius: 0px 0px 4px 4px;*/
 }
 
-.footer {
-	color: var(--footerTextColor);
-	background-color: var(--backgroundColorDark);
-	padding: 0;
-	/*margin: 0;*/
-}
-.footer .logo {
-	text-decoration: none;
-	color: var(--footerLinkColor);
+.team-card-name {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	color: var(--headersColor);
 }
 
-.header li .link:hover,
-.header li .link:focus {
+.team-card-role {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--textColor);
+}
+
+.header .link:hover,
+.header .link:focus {
 	color: var(--pressedStateColor);
 }
 
