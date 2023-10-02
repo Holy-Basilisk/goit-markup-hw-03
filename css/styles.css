@@ -40,6 +40,7 @@ ul, ol {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
+	list-style: none;
 }
 img {
 	display: block;
@@ -51,36 +52,44 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color: var(--colorSlate);
 	background-color: var(--backgroundColorWhite);
+	/*max-width: 1440px;*/
+}
 
+.container { 
+	max-width: 1158px;
+	padding-left: ; 
+	padding-right:  ;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .list {list-style: none}
 
-.header ul,
-.features ul,
-.portfolio ul,
-.our-team ul,
-.button-list,
-.project-list {
-	list-style: none;
-}
-
-.header li,
-.features li,
-.portfolio li,
-.our-team li,
-.button-list li,
-.project-list li {
-	
+.section {
+	padding: 120px 0;
 }
 
 .header {
-	
+	border-bottom: 1px solid var(--colorCornflower);
+	background-color: var(--backgroundColorWhite);
 }
-.header nav,
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 0;
+}
+
+.header nav {
+	display: flex;
+	gap: 76px;
+}
+
 .header address,
 .header ul {
-
+	display: flex;
+	gap: 40px;
 }
 
 .header .link {
@@ -102,6 +111,9 @@ body {
 	background-color: var(--backgroundColorDark);
 	
 }
+
+.footer .container {padding: 100px 0;}
+
 /*.footer .logo {
 	text-decoration: none;
 	color: var(--footerLinkColor);
@@ -133,6 +145,12 @@ body {
 
 }
 
+.hero-image .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .button {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
@@ -143,7 +161,6 @@ body {
 	text-align: center;
 	letter-spacing: 0.04em;
 	cursor: pointer;
-
 }
 
 .hero-image {
@@ -164,11 +181,17 @@ body {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
-	/*pad__ding: 16px 32px;
-	box-sha__dow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	bor__der-radius: 4px;*/
+	padding: 16px 32px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 	letter-spacing: 0.04em;	
 	text-transform: capitalize
+}
+
+.features .list {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
 }
 
 .features h3,
@@ -203,26 +226,25 @@ body {
 	text-align: center;
 	letter-spacing: 0.02em;
 	font-weight: 700;
+	margin-bottom: 72px;
 }
 
 .our-team {
 	background-color: var(--backgroundColorLight);
 	text-align: center;
-	/*disp__lay: flex;*/
-	/*flex-dir__ection: column;*/
-	justify-content: center;
-/*	ali__gn-items: center;
-	pad__ding: 0px;*/
-	/*тут флекс работает как надо :) но мб по другому структуру нужно будет сделать*/
+}
+
+.our-team .list {
+	display: flex;
+	justify-content: space-between;
 }
 
 .our-team .team-card {
 	background-color: var(--backgroundColorWhite);
 	/*wid__th: 264px;
 	hei__ght: 380px;*/
-	
-	/*box-sha__dow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-	bor__der-radius: 0px 0px 4px 4px;*/
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
 }
 
 .team-card-name {
@@ -231,6 +253,7 @@ body {
 	line-height: 1.2;
 	letter-spacing: 0.02em;
 	color: var(--headersColor);
+	padding-top: 32px;
 }
 
 .team-card-role {
@@ -238,6 +261,17 @@ body {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: var(--textColor);
+	padding-bottom: 32px;
+}
+
+.portfolio .project-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.project-card {
+	border: 1px solid var(--colorCornflower);
 }
 
 .header .link:hover,
