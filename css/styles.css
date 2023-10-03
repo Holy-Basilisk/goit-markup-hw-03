@@ -57,9 +57,9 @@ body {
 
 .container { 
 	max-width: 1158px;
-	padding: 0 15px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 15px;
 }
 
 .visually-hidden {
@@ -208,7 +208,7 @@ body {
 }
 
 .feature-item {
-	flex-basis: calc((100% - 72px) / 4));
+	flex-basis: calc((100% - 72px) / 4);
 }
 
 .features h3,
@@ -317,4 +317,4 @@ body {
 	background-color: var(--pressedStateColor);
 }
 
-.version {display: none}
+/*.version {display: none}*/
