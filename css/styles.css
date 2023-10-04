@@ -63,11 +63,16 @@ body {
 }
 
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+	position: absolute;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .list {list-style: none}
@@ -85,7 +90,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 24px 0;
 }
 
 .header nav {
@@ -106,6 +110,7 @@ body {
 	line-height: 1.5;
 	font-weight: 500;
 	letter-spacing: 0.02em;
+	display: block;
 }
 
 .header .list .link {padding: 24px 0;}
@@ -317,4 +322,4 @@ body {
 	background-color: var(--pressedStateColor);
 }
 
-/*.version {display: none}*/
+.version {display: none}
